@@ -1,29 +1,34 @@
+<!DOCTYPE HTML>
 <html>
 <head>
-	<title>Ticket:1 Contact info</title>
+	<meta charset="utf-8">
+	<title>42 Coffee Cups Ticket1 Contact info</title>
+	{% load static %}
+	{% get_static_prefix as STATIC %}
+	<link rel="stylesheet" type="text/css" href="{{ STATIC }}css/style.css"/>
 </head>
 <body>
 	{% if person_list %}
 	<table>
 		<tr>
-			<td colspan="2"><h1>42coffeecups contact info</h1></td>
+			<td colspan="2"><h1 id="title">42coffeecups contact info</h1></td>
 		</tr>
 		<tr>
 			{% for contact in person_list %}
 			<td>
 				<ul>
-					<li>Name: {{ contact.name }}</li>
-					<li>Last Name: {{ contact.last_name }}</li>
-					<li>Date of birth: {{ contact.date_of_birth }}</li>
-					<li>Bio: {{ contact.bio }}</li>
+					<li>Name: <b>{{ contact.name }}</b></li>
+					<li>Last Name: <b>{{ contact.last_name }}</b></li>
+					<li>Date of birth: <b>{{ contact.date_of_birth }}</b></li>
+					<li>Bio: <b>{{ contact.bio }}</b></li>
 				</ul>
 			</td>
 			<td>
 				<ul>
-					<li>Email: {{ contact.email }}</li>
-					<li>Jabber: {{ contact.jabber }}</li>
-					<li>Skype: {{ contact.skype }}</li>
-					<li>Other contact" {{ contact.other_contacts }}</li>
+					<li>Email: <b>{{ contact.email }}</b></li>
+					<li>Jabber: <b>{{ contact.jabber }}</b></li>
+					<li>Skype: <b>{{ contact.skype }}</b></li>
+					<li>Other contact" <b>{{ contact.other_contacts }}</b></li>
 				</ul>
 			</td>
 			{% endfor %}
