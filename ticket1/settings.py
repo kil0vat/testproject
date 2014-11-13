@@ -1,3 +1,4 @@
+
 """
 Django settings for ticket1 project.
 
@@ -82,6 +83,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
-SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
-STATIC_ROOT = os.path.join(SITE_ROOT,os.path.pardir)
-STATIC_ROOT = os.path.join(STATIC_ROOT,'static')
+PROJECT_ROOT = os.path.dirname(os.path.realpath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_ROOT,'static')
