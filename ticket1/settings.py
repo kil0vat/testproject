@@ -84,4 +84,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 PROJECT_ROOT = os.path.dirname(os.path.realpath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_ROOT,'static')
+STATIC_ROOT = 'http://42-bohdang-testproject.bohdangorovy.at.getbarista.com/static'
