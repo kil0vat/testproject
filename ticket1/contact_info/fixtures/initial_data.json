@@ -1,0 +1,16 @@
+[
+	{
+		"model": "contact_info.Person",
+		"pk": 1,
+		"fields": {
+			"name": "Bohdan",
+			"last_name": "Gorovoy",
+			"date_of_birth": "23/06/1993",
+			"bio": "I'm 21 and I live in Kyiv",
+			"email": "bohdangorovoy@gmail.com",
+			"jabber": "bohdang@jabber.ru",
+			"skype": "kil0vat",
+			"other_contacts": "None"
+		}
+	}
+]

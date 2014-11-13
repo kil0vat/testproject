@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>Ticket:1 Contact info</title>
+</head>
+<body>
+	{% if person_list %}
+	<table>
+		<tr>
+			<td colspan="2"><h1>42coffeecups contact info</h1></td>
+		</tr>
+		<tr>
+			{% for contact in person_list %}
+			<td>
+				<ul>
+					<li>Name: {{ contact.name }}</li>
+					<li>Last Name: {{ contact.last_name }}</li>
+					<li>Date of birth: {{ contact.date_of_birth }}</li>
+					<li>Bio: {{ contact.bio }}</li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li>Email: {{ contact.email }}</li>
+					<li>Jabber: {{ contact.jabber }}</li>
+					<li>Skype: {{ contact.skype }}</li>
+					<li>Other contact" {{ contact.other_contact }}</li>
+				</ul>
+			</td>
+			{% endfor %}
+		</tr>
+	</table>
+	{% else %}
+		No contact info available!
+	{% endif %}
+</body>

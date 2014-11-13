@@ -1,7 +1,7 @@
 from ticket1.contact_info.models import Person
 from django.shortcuts import render
 from django.template import loader, RequestContext
-from django.http import HttpRsponse
+from django.http import HttpResponse
 # Create your views here.
 
 def base(request):
