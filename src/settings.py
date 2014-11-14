@@ -1,22 +1,20 @@
-
-"""
-Django settings for src project.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/1.7/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.7/ref/settings/
-"""
+# Django settings for src project.
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+
 import os
+
+ADMINS = (
+    ('Gorovoy Bohdan', 'bohdangorovoy@ukr.net'),
+)
+
+MANAGERS = ADMINS
+
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '+f5#7l3^63=^20e))(e5d8#au@282ig6br+9^6yi)y5itp5893'
@@ -82,12 +80,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.realpath(__file__))
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 
-STATIC_ROOT = os.path.join(PROJECT_ROOT,'static')
+MEDIA_URL = '/media/'
 
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 STATIC_URL = '/static/'
+
+ADMIN_MEDIA_PREFIX = '/media/admin/'
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
