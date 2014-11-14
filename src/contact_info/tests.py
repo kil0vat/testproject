@@ -7,7 +7,7 @@ Replace this with more appropriate tests for your application.
 
 from django.test import TestCase
 from django.test.client import Client
-from ticket1.contact_info.models import Person
+from src.contact_info.models import Person
 
 class HttpTest(TestCase):
 	def test_base(self):

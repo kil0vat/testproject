@@ -1,4 +1,4 @@
-from ticket1.contact_info.models import Person
+from src.contact_info.models import Person
 from django.shortcuts import render
 from django.template import loader, RequestContext
 from django.http import HttpResponse
