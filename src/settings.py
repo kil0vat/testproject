@@ -1,6 +1,6 @@
 
 """
-Django settings for ticket1 project.
+Django settings for src project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -38,7 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ticket1.contact_info',
+    'src.contact_info',
     'south',
 )
 
@@ -50,9 +50,9 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'ticket1.urls'
+ROOT_URLCONF = 'src.urls'
 
-WSGI_APPLICATION = 'ticket1.wsgi.application'
+WSGI_APPLICATION = 'src.wsgi.application'
 
 
 # Database
@@ -85,3 +85,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 PROJECT_ROOT = os.path.dirname(os.path.realpath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT,'static')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
