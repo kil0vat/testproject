@@ -1,8 +1,9 @@
 SHELL=/bin/sh
+
+PROJECT_NAME=src
+
 MANAGE=PYTHONPATH=$(CURDIR) python manage.py
 
-test:
-	PYTHONPATH=`pwd` DJANGO_SETTINGS_MODULE=src.settings $(MANAGE) test contact_info
 
 run:
 	PYTHONPATH=`pwd` DJANGO_SETTINGS_MODULE=src.settings $(MANAGE) runserver
@@ -18,3 +19,7 @@ migrate:
 
 collectstatic:
 	PYTHONPATH=`pwd` DJANGO_SETTINGS_MODULE=src.settings $(MANAGE) collectstatic --noinput
+
+test:
+	PYTHONPATH=`pwd` DJANGO_SETTINGS_MODULE=src.settings $(MANAGE) test contact_info
+
