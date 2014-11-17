@@ -1,4 +1,4 @@
 42-bohdang-testproject
 ======================
 
-Test project for 42coffeecups
+Test project for 42coffeecups :)
