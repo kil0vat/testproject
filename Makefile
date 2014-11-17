@@ -4,7 +4,6 @@ PROJECT_NAME=src
 
 MANAGE=PYTHONPATH=$(CURDIR) python manage.py
 
-
 run:
 	PYTHONPATH=`pwd` DJANGO_SETTINGS_MODULE=src.settings $(MANAGE) runserver
 
@@ -22,4 +21,3 @@ collectstatic:
 
 test:
 	PYTHONPATH=`pwd` DJANGO_SETTINGS_MODULE=src.settings $(MANAGE) test contact_info
-
